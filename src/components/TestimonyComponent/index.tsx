@@ -13,11 +13,18 @@ export const TestimonyComponent = memo(({ text, author }: Props) => (
   <TestimonyContainer>
     <QuotationIcon />
 
-    <Text color='isabelline' fontSize='34px' width='90%'>
+    <Text
+      color='isabelline'
+      fontSize={['14px', '19px', '24px', '29px', '34px']}
+      width='90%'
+    >
       {text}
     </Text>
 
-    <Text color='spanish_gray' fontSize='34px'>
+    <Text
+      color='spanish_gray'
+      fontSize={['14px', '19px', '24px', '29px', '34px']}
+    >
       {author}
     </Text>
   </TestimonyContainer>

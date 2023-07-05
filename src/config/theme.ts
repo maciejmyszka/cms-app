@@ -6,8 +6,7 @@ export const components = {
       main: {
         background: 'soap',
         borderRadius: '2rem',
-        padding: '2.07rem 4.8rem',
-        fontSize: '22px',
+        fontSize: ['14px', '16px', '18px', '20px', '22px'],
         fontWeight: 'normal',
         _hover: {
           background: 'soap',
@@ -22,13 +21,14 @@ export const components = {
     variants: {
       hero: {
         color: 'raisin_black',
-        fontSize: '62px',
+        fontSize: ['22px', '32px', '42px', '52px', '62px'],
         fontWeight: '600',
-        lineHeight: '95px',
+        lineHeight: ['52px', '62px', '72px', '82px', '92px'],
+        textAlign: ['center', 'center', 'center', 'left', 'left'],
       },
       newsletter: {
         color: 'raisin_black',
-        fontSize: '55px',
+        fontSize: ['30px', '35px', '45px', '50px', '55px'],
         textAlign: 'center',
         fontWeight: '500',
       },

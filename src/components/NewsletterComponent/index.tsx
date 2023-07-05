@@ -23,19 +23,29 @@ export const NewsletterComponent = () => {
 
   return (
     <NewsletterContainer>
-      <Text variant='newsletter' mt='10.8rem'>
+      <Text variant='newsletter' mt={['0', '0', '0', '10.8rem', '10.8rem']}>
         Sign up for Newsletter
       </Text>
 
-      <Flex gap='1.5rem' mt='1.7rem'>
+      <Flex
+        gap={['0.5rem', '1rem', '1.5rem']}
+        mt={['0', '0', '0', '1.7rem', '1.7rem']}
+        flexDirection={['column', 'column', 'column', 'row', 'row']}
+      >
         <Input
           type='text'
           border='none'
           borderRadius='2.5rem'
           bg='isabelline'
           placeholder='Type your email'
-          p='2.1rem 2.7rem'
-          fontSize='22px'
+          p={[
+            '1.4rem 2.7rem',
+            '1.6rem 2.7rem',
+            '1.8rem 2.7rem',
+            '2rem 2.7rem',
+            '2.1rem 2.7rem',
+          ]}
+          fontSize={['14px', '16px', '18px', '20px', '22px']}
           value={value}
           onChange={(e: ChangeEvent<HTMLInputElement>) =>
             setValue(e.target.value)
@@ -43,7 +53,13 @@ export const NewsletterComponent = () => {
         />
 
         <Button
-          padding='2.1rem 6.7rem'
+          padding={[
+            '1.4rem 3rem',
+            '1.6rem 4rem',
+            '1.8rem 5rem',
+            '2rem 4rem',
+            '2.1rem 6.7rem',
+          ]}
           variant='main'
           onClick={onButtonClick}
           isDisabled={!value}
@@ -52,7 +68,11 @@ export const NewsletterComponent = () => {
         </Button>
       </Flex>
 
-      <Text variant='message' color={isSuccess ? 'apple' : 'red'} mt='0.7rem'>
+      <Text
+        variant='message'
+        color={isSuccess ? 'apple' : 'red'}
+        mt={['0rem', '0rem', '0rem', '0.7rem', '0.7rem']}
+      >
         {message}
       </Text>
     </NewsletterContainer>

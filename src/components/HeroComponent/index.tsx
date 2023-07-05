@@ -9,11 +9,11 @@ interface Props {
 
 export const HeroComponent = memo(({ text, img }: Props) => (
   <HeroContainer>
-    <Flex width='48%' alignItems='center'>
+    <Flex width={['100%', '100%', '100%', '48%', '48%']} alignItems='center'>
       <Text variant='hero'>{text}</Text>
     </Flex>
 
-    <Flex width='49%'>
+    <Flex width={['100%', '100%', '100%', '48%', '48%']} height='100%'>
       <Flex
         backgroundImage={`url("${img}")`}
         width='100%'

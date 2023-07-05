@@ -1,5 +1,5 @@
-function App() {
-  return <div className='App'></div>;
-}
+import { AppProvider } from './providers/AppProvider';
+
+const App = () => <AppProvider />;
 
 export default App;

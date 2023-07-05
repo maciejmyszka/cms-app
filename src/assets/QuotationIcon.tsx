@@ -1,8 +1,8 @@
 export const QuotationIcon = () => {
   return (
     <svg
-      width='58px'
-      height='50px'
+      width='68px'
+      height='60px'
       viewBox='0 0 48 40'
       version='1.1'
       xmlns='http://www.w3.org/2000/svg'

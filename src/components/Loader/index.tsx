@@ -5,3 +5,5 @@ export const Loader = () => (
     <Button isLoading bg='transparent' color='white'></Button>
   </Flex>
 );
+
+export default Loader;

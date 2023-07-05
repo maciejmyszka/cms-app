@@ -7,14 +7,19 @@ interface Props {
 
 export const HeroComponent = ({ text, img }: Props) => {
   return (
-    <Flex height='95vh' padding='11rem 15rem' gap='4%'>
+    <Flex height='92vh' padding='10.8rem 15rem' gap='3%'>
       <Flex width='48%' alignItems='center'>
-        <Text color='#231E1E' fontSize='58px'>
+        <Text
+          color='#231E1E'
+          fontSize='62px'
+          fontWeight='600'
+          lineHeight='95px'
+        >
           {text}
         </Text>
       </Flex>
 
-      <Flex width='48%'>
+      <Flex width='49%'>
         <Flex
           backgroundImage={`url("${img}")`}
           width='100%'

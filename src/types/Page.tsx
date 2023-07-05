@@ -8,7 +8,7 @@ export interface Page {
 export interface PageSection {
   img?: string;
   text?: string;
-  type?: SectionsEnum;
+  type: SectionsEnum;
   author?: string;
 }
 

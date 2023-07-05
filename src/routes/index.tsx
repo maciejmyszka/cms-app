@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { getPages, pagesState } from '../slices/pagesSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import { PageComponent } from '../components/PageComponent';
+import { PageView } from '../views/PageView';
 import { AppDispatch } from '../config/store';
 
 export const Routing = () => {
@@ -18,7 +18,7 @@ export const Routing = () => {
     <Router>
       <Routes>
         {pages.map(({ id, url }) => (
-          <Route key={id} path={url} element={<PageComponent pageId={id} />} />
+          <Route key={id} path={url} element={<PageView pageId={id} />} />
         ))}
       </Routes>
     </Router>

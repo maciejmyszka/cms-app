@@ -1,9 +1,9 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-import { RootState } from '../config/store';
-import { StatusEnum } from '../enums/StatusEnum';
-import { Page } from '../types/Page';
-import { useAxios } from '../hooks/useAxios';
+import { RootState } from 'config/store';
+import { StatusEnum } from 'enums/StatusEnum';
+import { Page } from 'types/Page';
+import { useAxios } from 'hooks/useAxios';
 
 export interface PagesState {
   pages: Page[];

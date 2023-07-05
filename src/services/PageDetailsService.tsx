@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { PageDetails } from '../types/Page';
+import { PageDetails } from 'types/Page';
 
 export const getPageDetails = async (id: string) => {
   try {

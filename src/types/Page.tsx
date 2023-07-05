@@ -1,4 +1,4 @@
-import { SectionsEnum } from '../enums/SectionsEnum';
+import { SectionsEnum } from 'enums/SectionsEnum';
 
 export interface Page {
   url: string;

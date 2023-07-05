@@ -1,9 +1,10 @@
 import { Box, Button, Flex, Text } from '@chakra-ui/react';
-import { LogoIcon } from '../../assets/LogoIcon';
-import { useSelector } from 'react-redux';
-import { pagesState } from '../../slices/pagesSlice';
 import { useNavigate } from 'react-router-dom';
-import { NavigationContainer } from '../../containers/NavigationContainer';
+import { useSelector } from 'react-redux';
+
+import { LogoIcon } from 'assets/LogoIcon';
+import { pagesState } from 'slices/pagesSlice';
+import { NavigationContainer } from 'containers/NavigationContainer';
 
 export const Navigation = () => {
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ export const Navigation = () => {
             <Text
               key={id}
               textTransform='capitalize'
-              color='#231E1E'
+              color='raisin_black'
               fontSize='22px'
               onClick={() => navigate(url)}
               cursor='pointer'
@@ -32,15 +33,7 @@ export const Navigation = () => {
         </Flex>
       </Flex>
 
-      <Button
-        background='purple'
-        borderRadius='2rem'
-        padding='2.07rem 4.8rem'
-        fontSize='22px'
-        fontWeight='normal'
-      >
-        Contact us
-      </Button>
+      <Button variant='main'>Contact us</Button>
     </NavigationContainer>
   );
 };

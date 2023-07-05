@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { AxiosType } from '../types/AxiosType';
+import { AxiosType } from 'types/AxiosType';
 
 export const useAxios = () => {
   const config = {

@@ -1,13 +1,15 @@
 import { Flex } from '@chakra-ui/react';
-import { ChildrenProps } from '../../types/ChildrenProps';
 import { memo } from 'react';
+
+import { ChildrenProps } from 'types/ChildrenProps';
 
 export const NavigationContainer = memo(({ children }: ChildrenProps) => (
   <Flex
     width='100%'
     alignItems='center'
     px='5.4rem'
-    borderBottom='1px solid #F1F0F0'
+    borderBottom='1px solid'
+    borderColor='isabelline'
     justifyContent='space-between'
     height='13.7vh'
   >

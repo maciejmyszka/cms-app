@@ -3,8 +3,8 @@ import { memo } from 'react';
 
 import { ChildrenProps } from 'types/ChildrenProps';
 
-export const PageContainer = memo(({ children }: ChildrenProps) => (
-  <Flex flexDirection='column' width='100%' height='100%'>
+export const HeroContainer = memo(({ children }: ChildrenProps) => (
+  <Flex height='92vh' padding='10.8rem 15rem' gap='3%'>
     {children}
   </Flex>
 ));

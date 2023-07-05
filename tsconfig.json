@@ -1,11 +1,13 @@
 {
+  "ts-node": {
+    // Do not forget to `npm i -D tsconfig-paths`
+    "require": ["tsconfig-paths/register"]
+  },
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "target": "esnext",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -13,14 +15,26 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": "./src",
+    "paths": {
+      "assets/*": ["assets/*"],
+      "components/*": ["components/*"],
+      "config/*": ["config/*"],
+      "containers/*": ["containers/*"],
+      "enums/*": ["enums/*"],
+      "hooks/*": ["hooks/*"],
+      "providers/*": ["providers/*"],
+      "routes/*": ["routes/*"],
+      "services/*": ["services/*"],
+      "slices/*": ["slices/*"],
+      "types/*": ["types/*"],
+      "utils/*": ["utils/*"],
+      "views/*": ["views/*"],
+    }
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }

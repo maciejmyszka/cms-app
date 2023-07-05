@@ -25,6 +25,6 @@ export const postNewsletter = async (email: string) => {
     return response;
   } catch (err: any) {
     console.error(`Error: ${err}`);
-    return err.response.data.message;
+    return err?.response.data.message;
   }
 };

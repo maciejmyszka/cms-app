@@ -1,15 +1,15 @@
-import { useEffect, useState } from 'react';
-import { PageDetails } from '../../types/Page';
-import { Navigation } from '../../components/Navigation';
-import { PageContainer } from '../../containers/PageContainer';
-import { displaySection } from '../../utils/displaySection';
-import { getPageDetails } from '../../services/PageDetailsService';
+import { memo, useEffect, useState } from 'react';
+import { PageDetails } from 'types/Page';
+import { Navigation } from 'components/Navigation';
+import { PageContainer } from 'containers/PageContainer';
+import { displaySection } from 'utils/displaySection';
+import { getPageDetails } from 'services/PageDetailsService';
 
 interface Props {
   pageId: string;
 }
 
-export const PageView = ({ pageId }: Props) => {
+export const PageView = memo(({ pageId }: Props) => {
   const [pageContent, setPageContent] = useState<PageDetails | null>(null);
 
   useEffect(() => {
@@ -31,4 +31,4 @@ export const PageView = ({ pageId }: Props) => {
       )}
     </PageContainer>
   );
-};
+});

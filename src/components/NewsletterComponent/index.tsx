@@ -1,6 +1,8 @@
 import { Button, Flex, Input, Text } from '@chakra-ui/react';
 import { ChangeEvent, useState } from 'react';
-import { postNewsletter } from '../../services/NewsletterService';
+
+import { postNewsletter } from 'services/NewsletterService';
+import { NewsletterContainer } from 'containers/NewsletterContainer';
 
 export const NewsletterComponent = () => {
   const [value, setValue] = useState<string>('');
@@ -20,23 +22,17 @@ export const NewsletterComponent = () => {
   };
 
   return (
-    <Flex px='27.8%' flexDirection='column' gap='3.6rem' height='70vh'>
-      <Text
-        color='#231E1E'
-        fontSize='59px'
-        textAlign='center'
-        mt='10.4rem'
-        fontWeight='500'
-      >
+    <NewsletterContainer>
+      <Text variant='newsletter' mt='10.8rem'>
         Sign up for Newsletter
       </Text>
 
-      <Flex gap='1.5rem' mt='1.5rem'>
+      <Flex gap='1.5rem' mt='1.7rem'>
         <Input
           type='text'
           border='none'
           borderRadius='2.5rem'
-          bg='#F1F0F0'
+          bg='isabelline'
           placeholder='Type your email'
           p='2.1rem 2.7rem'
           fontSize='22px'
@@ -47,11 +43,8 @@ export const NewsletterComponent = () => {
         />
 
         <Button
-          bg='purple'
-          borderRadius='2.5rem'
-          padding='2rem 6.7rem'
-          fontSize='22px'
-          fontWeight='normal'
+          padding='2.1rem 6.7rem'
+          variant='main'
           onClick={onButtonClick}
           isDisabled={!value}
         >
@@ -59,14 +52,9 @@ export const NewsletterComponent = () => {
         </Button>
       </Flex>
 
-      <Text
-        textAlign='center'
-        fontSize='20px'
-        color={isSuccess ? 'green' : 'red'}
-        mt='0.4rem'
-      >
+      <Text variant='message' color={isSuccess ? 'apple' : 'red'} mt='0.7rem'>
         {message}
       </Text>
-    </Flex>
+    </NewsletterContainer>
   );
 };

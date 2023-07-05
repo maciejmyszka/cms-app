@@ -1,7 +1,7 @@
-import { SectionsEnum } from '../enums/SectionsEnum';
-import { HeroComponent } from '../components/HeroComponent';
-import { NewsletterComponent } from '../components/NewsletterComponent';
-import { TestimonyComponent } from '../components/TestimonyComponent';
+import { SectionsEnum } from 'enums/SectionsEnum';
+import { HeroComponent } from 'components/HeroComponent';
+import { NewsletterComponent } from 'components/NewsletterComponent';
+import { TestimonyComponent } from 'components/TestimonyComponent';
 
 export const displaySection = (
   type: SectionsEnum,

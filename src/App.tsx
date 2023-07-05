@@ -1,5 +1,5 @@
-import { AppProvider } from './providers/AppProvider';
-import './App.css';
+import { AppProvider } from 'providers/AppProvider';
+import 'App.css';
 
 const App = () => <AppProvider />;
 

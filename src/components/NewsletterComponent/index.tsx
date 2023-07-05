@@ -1,6 +1,6 @@
 import { Button, Flex, Input, Text } from '@chakra-ui/react';
 import { ChangeEvent, useState } from 'react';
-import axios from 'axios';
+import { postNewsletter } from '../../services/NewsletterService';
 
 export const NewsletterComponent = () => {
   const [value, setValue] = useState<string>('');
@@ -8,26 +8,14 @@ export const NewsletterComponent = () => {
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
 
   const onButtonClick = async () => {
-    try {
-      const response = await axios.post(
-        `${process.env.REACT_APP_API_URL}/newsletter`,
-        { email: value },
-        {
-          headers: {
-            Authorization: `Basic ${btoa(
-              `${process.env.REACT_APP_API_USERNAME}:${process.env.REACT_APP_API_PASSWORD}`
-            )}`,
-          },
-        }
-      );
-      setMessage(response.data.message);
+    const response = await postNewsletter(value);
 
-      if (response.statusText === 'OK') {
-        setIsSuccess(true);
-      }
-    } catch (err: any) {
-      setMessage(err.response.data.message);
+    if (response.statusText === 'OK') {
+      setIsSuccess(true);
+      setMessage(response.data.message);
+    } else {
       setIsSuccess(false);
+      setMessage(response);
     }
   };
 
